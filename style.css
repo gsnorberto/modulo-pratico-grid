@@ -1,0 +1,51 @@
+.container{
+   display: grid;
+   background-color: antiquewhite;
+
+   /* TAMANHO DAS COLUNAS */
+   /* grid-template-columns: 100px 250px 100px 250px; */
+   /* grid-template-columns: auto 300px; */
+   /* grid-template-columns: repeat(3, 1fr); */
+   /* grid-template-columns: 100px repeat(3, 1fr) 200px; */
+   /* grid-template-columns: repeat(3, 100px 300px); */
+   /* grid-template-columns: repeat(auto-fill, 700px); */
+   /* grid-template-columns: repeat(8, minmax(200px, 300px)); */
+   grid-template-columns: repeat(3, 200px);
+
+   justify-content: center;
+
+   /* TAMANHO DAS LINHAS */
+   /* grid-template-rows: 100px 200px; */
+   /* grid-auto-rows: 100px; */
+   /* grid-auto-rows: minmax(50px, auto); */ /* Min: 50px e Max: auto */
+
+   /* ESPAÇAMENTO */
+   grid-column-gap: 10px; /* Nova forma: column-gap: 10px; */
+   grid-row-gap: 10px;
+   /* ou */
+   /* grid-gap: 10px 30px; */  /* Nova forma: gap: 10px 30px; */
+}
+
+.item{
+   background-color: blue;
+   border-radius: 10px;
+   padding: 20px;
+   color: #FFFFFF;
+   font-size: 20px;
+}
+
+.item1{
+   /* OBS: Sempre deve definir a posição da coluna, mesmo que só vá mudar a posição da linha. */
+   grid-column-start: 1;
+   grid-column-end: 3;
+}
+
+.item7{
+   /* grid-column-start: 3;
+   grid-column-end: 4; */
+   /* ou */
+   grid-column: 3 / 4; /* é o mesmo que: grid-column: 3 / spam 3; */
+   grid-row-start: 1;
+   grid-row-end: 3;
+}
+
